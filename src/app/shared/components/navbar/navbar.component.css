@@ -1,0 +1,49 @@
+.icon:hover{
+ scale: 1.1;
+ cursor: pointer;
+
+}
+
+li{
+  cursor: pointer;
+}
+
+
+.navbar{
+  background: #023047;
+}
+
+.nav-link{
+  color: #ffb703;
+}
+
+.nav-link:hover{
+ color: #fb8500;
+}
+
+input{
+  background-color: transparent;
+  color: white;
+}
+
+input:focus{
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+
+::placeholder{
+  color: #ffb703;
+}
+
+button
+{
+  color: #ffb703;
+}
+
+button:hover{
+  background-color: #023047;
+  color: #fb8500;
+  scale: 1.02;
+}
+
