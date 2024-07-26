@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -17,12 +18,16 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
     MainPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
 
   exports:[
     NavbarComponent,
-    MainPageComponent
+    MainPageComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutComponent
   ]
 })
 export class SharedModule { }
