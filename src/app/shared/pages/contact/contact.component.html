@@ -1,1 +1,39 @@
-<p>contact works!</p>
+<div class="container mt-3">
+  <div class="card">
+    <h3 class="card-header">Formulario de contacto</h3>
+    <div class="card-body">
+      <form [formGroup]="formContact" (ngSubmit)="enviar()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input [ngClass]="{'is-invalid': hasErrors('name','required')}" type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" formControlName="name">
+          <div class="text-danger" *ngIf="hasErrors('name','required')">Nombre requerido</div>
+        </div>
+        <div class="mb-3">
+          <label for="lastName" class="form-label">Apellido</label>
+          <input [ngClass]="{'is-invalid': hasErrors('lastName','required')}" type="text" name="lastName" class="form-control" id="lastName" aria-describedby="emailHelp" formControlName="lastName">
+          <div class="text-danger" *ngIf="hasErrors('lastName','required')">Apellido requerido</div>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Telefono</label>
+          <input [ngClass]="{'is-invalid':hasErrors('phone','required') || hasErrors('phone','minlength') || hasErrors('phone','maxlength')}" type="text" name="phone" class="form-control" id="phone" formControlName="phone">
+          <div class="text-danger" *ngIf="hasErrors('phone','required')">Telefono requerido</div>
+          <div class="text-danger" *ngIf="hasErrors('phone','minlength')">Telefono debe tener minimo 7 digitos</div>
+          <div class="text-danger" *ngIf="hasErrors('phone','maxlength')">Telefono debe tener maximo 10 digitos</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input [ngClass]="{'is-invalid':hasErrors('email','email') || hasErrors('email','required') }" type="email" name="email" class="form-control" id="email" formControlName="email">
+          <div class="text-danger" *ngIf="hasErrors('email','required')">Email requerido</div>
+          <div class="text-danger" *ngIf="hasErrors('email','email')">Email invalido</div>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Descripción</label>
+          <textarea [ngClass]="{'is-invalid':hasErrors('description','required') || hasErrors('description','maxlength') }" type="text" class="form-control" id="description" formControlName="description"></textarea>
+          <div class="text-danger" *ngIf="hasErrors('description','required')">Descripción requerida</div>
+          <div class="text-danger" *ngIf="hasErrors('description','maxlength')">Excede el maximo de caracteres</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
