@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-lg">
+<nav class="navbar sticky-top navbar-expand-lg" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="../../../../assets/ecommerce.png" alt="100"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,6 +11,14 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="productos">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Categorias ⌵</a>
+          <ul class="dropdown">
+            <li  *ngFor="let category of categoryList ; let i = index" class="nav-item">
+              <a class="nav-link" href="">{{category}}</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="acerca">Sobre nosotros</a>

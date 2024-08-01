@@ -6,3 +6,13 @@ h3{
 label{
   color: #023e8a;
 }
+
+.card{
+  width: 40rem;
+}
+
+.center
+{
+  display: flex;
+  justify-content: center;
+}

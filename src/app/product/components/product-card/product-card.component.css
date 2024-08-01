@@ -1,0 +1,21 @@
+.card{
+  margin: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.center{
+  display: flex;
+  padding: 1px;
+}
+
+.card-img-top{
+  width: 95%;
+  height: 400px;
+  object-fit: scale-down;
+}
+
+.card-body{
+  width: 70%;
+  height: 50%;
+}

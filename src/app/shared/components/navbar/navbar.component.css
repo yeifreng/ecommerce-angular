@@ -47,3 +47,20 @@ button:hover{
   scale: 1.02;
 }
 
+/* css para dropdown de categorias */
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown{
+  width: 30%;
+  background: #023047;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li:hover ul.dropdown{
+  display: block;
+}
